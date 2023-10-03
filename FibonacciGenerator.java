@@ -1,10 +1,10 @@
 import java.util.Iterator;
 
-public class FibonacciGenerator implements Iterator<Integer> {
+public class FibonacciGenerator implements Iterator<Long> {
     private int max;
     private int n = 0;
-    private int a = 0;
-    private int b = 1;
+    private long a = 0;
+    private long b = 1;
 
     FibonacciGenerator(int max) {
         this.max = max;
@@ -16,8 +16,8 @@ public class FibonacciGenerator implements Iterator<Integer> {
     }
 
     @Override
-    public Integer next() {
-        int x;
+    public Long next() {
+        long x;
         if (n == 0)
             x = 0;
         else
@@ -29,5 +29,4 @@ public class FibonacciGenerator implements Iterator<Integer> {
         return x;
 
     }
-
 }
